@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF8"?>
+
+<project name="antsample" default="all1">
+
+	<property file="project.properties"/>
+	
+	<mkdir dir="${sample.dest.dir}"/>
+	<mkdir dir="${sample.class.dir}"/>
+	<mkdir dir="${sample.test.data.dir}"/>
+	<mkdir dir="${sample.test.report.dir}"/>
+	<echoproperties prefix="sample"/>
+	
+	
+	<!--ソースパス(コンパイル、JUnit、JavaDoc)-->
+	<path id="src.path">
+		<pathelement location="${sample.src.java.dir}"/>
+		<pathelement location="${sample.src.test.dir}"/>
+	</path>
+
+	<!--コンパイル、テストのクラスパス-->
+	<path id="required.class.path">
+		<fileset dir="${sample.catalina.home}/lib">
+			<include name="servlet-api.jar"/>
+			<include name="jasper-runtime.jar"/>
+			<include name="jsp-api.jar"/>
+		</fileset>
+		<fileset dir="${sample.web.dir}/WEB-INF/lib">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+
+	<!--JUnit、JavaDoc出力用のクラスパス-->
+	<path id="war.class.path">
+		<path refid="required.class.path"/>
+		<path location="${sample.class.dir}"/>
+	</path>	
+
+
+	<target name="clean" description="出力ファイルを削除します">
+		<delete dir="${sample.dest.dir}"/>
+	</target>
+
+
+
+	
+	<target name="compile" description="コンパイルを行います">
+		<javac
+			destdir="${sample.class.dir}"
+			classpathref="required.class.path">
+			<src refid="src.path"/>
+		</javac>
+		
+		<copy todir="${sample.class.dir}">
+			<fileset dir="${sample.src.java.dir}">
+				<exclude name="**/*.java"/>
+			</fileset>
+		</copy>
+	</target>	
+
+
+	<target name="native2ascii" description="Native2Asciiを実行します。">
+		<delete>
+			<fileset dir="${sample.class.dir}" includes="**/*_ja.properties"/>
+		</delete>
+
+		<native2ascii 
+			encoding="Shift_JIS" 
+				src="${sample.src.java.dir}" 
+				dest="${sample.class.dir}" 
+				includes="**/*_ja.properties" 
+				/>
+	</target>
+
+
+	<target name="validate"  description="XMLの検証を行います">
+
+		<xmlcatalog id="xml.catalog" >
+		  <dtd publicId="-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+		       location="${sample.xmlcatalog.dir}/struts-config_1_1.dtd"/>
+		  <dtd publicId="-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+		       location="${sample.xmlcatalog.dir}/web-jsptaglibrary_1_2.dtd"/>
+		  <dtd publicId="-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+		       location="${sample.xmlcatalog.dir}/web-app.tld"/>
+		</xmlcatalog>
+
+		<xmlvalidate warn="false">
+			<fileset dir="${sample.web.dir}/WEB-INF">
+				<include name="struts-config.xml"/>
+				<include name="web.xml"/>
+				<include name="tlds/myweb.tld"/>
+			</fileset>
+			<xmlcatalog refid="xml.catalog"/>
+		</xmlvalidate>
+	</target>
+	
+	<target name="archive-war" description="WARファイルを作成します">
+		<jar destfile="${sample.war.path}">
+			<zipfileset dir="web"/>
+		</jar>
+	</target>	
+	
+	
+	
+	
+	<target name="cvsco" description="CVSからソースを取得します">
+		<cvs cvsRoot="${sample.cvs.root}"
+			package="${sample.cvs.package}"
+			dest="${sample.cvs.basedir}"
+			
+		/>
+	</target>
+	
+	
+	<target name="test" description="テストを実行します">
+		<junit printsummary="true">
+			<classpath refid="war.class.path"/>
+		    <formatter type="xml"/>
+			<batchtest fork="true" todir="${sample.test.data.dir}">
+		        <fileset dir="${sample.src.test.dir}">
+		            <include name="**/*Test.java"/>
+		            <exclude name="**/AllTests.java"/>
+		        </fileset>
+		    </batchtest>
+		</junit>
+	</target>
+	
+	<target name="test-report" description="テストのレポートを作成します">
+		<junitreport todir="${sample.test.report.dir}">
+		    <fileset dir="${sample.test.data.dir}">
+		        <include name="TEST-*.xml"/>
+		    </fileset>
+		    <report format="frames" todir="${sample.test.report.dir}"/>
+		</junitreport>
+	</target>		
+		
+	<target name="test-report2">		
+		<junitreport todir="dest/test/report">
+		    <fileset dir="dest/test/data">
+		        <include name="TEST-*.xml"/>
+		    </fileset>
+		    <report format="frames" todir="dest/test/report"/>
+		</junitreport>
+	</target>	
+	
+	
+	<target name="javadoc" description="JavaDocを作成します">
+		<mkdir dir="${sample.javadoc.dir}/api"/>
+		<javadoc packagenames="**"
+			sourcepathref="src.path"
+			classpathref="war.class.path"
+			destdir="${sample.javadoc.dir}"
+			author="true"
+			version="true"
+			use="true"
+			windowtitle="ant build sample"
+			doctitle="&lt;h1&gt;あんとびるどさんぷる&lt;/h1&gt;"			
+			bottom="&lt;i&gt;copyright (C) 2004 eclipse3book project.&lt;/i&gt;">		
+			<link offline="true" href="http://java.sun.com/j2ee/sdk_1.3/ja/techdocs/api/" packagelistLoc="${sample.pkglist.dir}/j2ee"/>
+			<link offline="true" href="http://java.sun.com/j2se/1.4/ja/docs/ja/api/" packagelistLoc="${sample.pkglist.dir}/j2se"/>
+			<link offline="true" href="http://jakarta.apache.org/struts/api/" packagelistLoc="${sample.pkglist.dir}/struts"/>
+		</javadoc>
+	</target>
+
+
+
+	<target name="all1" description="全て実行します">
+		<antcall target="compile"/>
+		<antcall target="native2ascii"/>
+		<antcall target="validate"/>
+		<antcall target="archive-war"/>
+	</target>	
+	
+	<target name="all2" description="全て実行します">
+		<antcall target="cvsco"/>
+		<antcall target="compile"/>
+		<antcall target="native2ascii"/>
+		<antcall target="validate"/>
+		<antcall target="test"/>
+		<antcall target="javadoc"/>
+		<antcall target="test-report"/>
+		<antcall target="archive-war"/>
+	</target>
+
+</project>

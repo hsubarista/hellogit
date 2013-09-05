@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="antsample" default="all">
+
+	<property file="project.properties"/>
+	
+	<mkdir dir="${sample.dest.dir}"/>
+	<mkdir dir="${sample.class.dir}"/>
+
+	
+	<!--ソースパス(コンパイル、JUnit、JavaDoc)-->
+	<path id="src.path">
+		<pathelement location="${sample.src.java.dir}"/>
+		<pathelement location="${sample.src.test.dir}"/>
+	</path>
+
+	
+	<!--コンパイル、テストのクラスパス-->
+	<path id="required.class.path">
+		<fileset dir="${sample.catalina.home}/lib">
+			<include name="servlet-api.jar"/>
+			<include name="jasper-runtime.jar"/>
+			<include name="jsp-api.jar"/>
+		</fileset>
+		<fileset dir="${sample.web.dir}/WEB-INF/lib">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+
+	
+	<target name="clean" description="出力ファイルを削除します">
+		<delete dir="${sample.dest.dir}"/>
+	</target>
+
+	
+	<target name="compile" description="コンパイルを行います">
+		<javac
+			destdir="${sample.class.dir}"
+			classpathref="required.class.path">
+			<src refid="src.path"/>
+		</javac>
+		
+		<copy todir="${sample.class.dir}">
+			<fileset dir="${sample.src.java.dir}">
+				<exclude name="**/*.java"/>
+			</fileset>
+		</copy>
+	</target>	
+
+
+	<target name="native2ascii" 
+	    description="Native2Asciiを実行します。">
+		<delete>
+			<fileset dir="${sample.class.dir}" 
+			    includes="**/*_ja.properties"/>
+		</delete>
+
+		<native2ascii 
+			encoding="Shift_JIS" 
+				src="${sample.src.java.dir}" 
+				dest="${sample.class.dir}" 
+				includes="**/*_ja.properties" 
+				/>
+	</target>
+
+
+	<target name="validate"  description="XMLの検証を行います">
+		<xmlvalidate warn="false">
+			<fileset dir="${sample.web.dir}/WEB-INF">
+				<include name="struts-config.xml"/>
+				<include name="web.xml"/>
+				<include name="tlds/myweb.tld"/>
+			</fileset>
+		</xmlvalidate>
+	</target>
+
+	
+	<target name="archive-war" description="WARファイルを作成します">
+		<jar destfile="${sample.war.path}">
+			<zipfileset dir="web"/>
+		</jar>
+	</target>	
+	
+
+	<target name="all" description="全て実行します">
+		<antcall target="compile"/>
+		<antcall target="native2ascii"/>
+		<antcall target="validate"/>
+		<antcall target="archive-war"/>
+	</target>	
+	
+</project>

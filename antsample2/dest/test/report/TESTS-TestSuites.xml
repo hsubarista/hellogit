@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite errors="0" failures="0" hostname="mywin7" id="0" name="BMICalclatorTest" package="bmi" tests="1" time="0.031" timestamp="2012-08-16T15:17:56">
+      <properties>
+          <property name="java.vendor" value="Oracle Corporation" />
+
+          <property name="sample.cvs.package" value="antsample2" />
+
+          <property name="sun.java.launcher" value="SUN_STANDARD" />
+
+          <property name="sun.management.compiler" value="HotSpot Client Compiler" />
+
+          <property name="os.name" value="Windows 7" />
+
+          <property name="sun.boot.class.path" value="C:\Program Files\Java\jre7\lib\resources.jar;C:\Program Files\Java\jre7\lib\rt.jar;C:\Program Files\Java\jre7\lib\sunrsasign.jar;C:\Program Files\Java\jre7\lib\jsse.jar;C:\Program Files\Java\jre7\lib\jce.jar;C:\Program Files\Java\jre7\lib\charsets.jar;C:\Program Files\Java\jre7\lib\jfr.jar;C:\Program Files\Java\jre7\classes" />
+
+          <property name="sun.desktop" value="windows" />
+
+          <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+
+          <property name="ant.home" value="C:\eclipse4book\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730" />
+
+          <property name="java.runtime.version" value="1.7.0_05-b06" />
+
+          <property name="sample.javadoc.dir" value="dest/javadoc" />
+
+          <property name="user.name" value="miya" />
+
+          <property name="user.language" value="ja" />
+
+          <property name="sample.dest.dir" value="dest" />
+
+          <property name="sample.catalina.home" value="C:/eclipse4book/apache-tomcat" />
+
+          <property name="sun.boot.library.path" value="C:\Program Files\Java\jre7\bin" />
+
+          <property name="ant.project.default-target" value="all1" />
+
+          <property name="ant.project.name" value="antsample" />
+
+          <property name="ant.file.antsample" value="C:\eclipse4book\eclipse\workspace\antsample2\build.xml" />
+
+          <property name="sample.cvs.root" value=":pserver:hoge@localhost:/cvsrepo" />
+
+          <property name="java.version" value="1.7.0_05" />
+
+          <property name="user.timezone" value="" />
+
+          <property name="sun.arch.data.model" value="32" />
+
+          <property name="java.endorsed.dirs" value="C:\Program Files\Java\jre7\lib\endorsed" />
+
+          <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86" />
+
+          <property name="sun.jnu.encoding" value="MS932" />
+
+          <property name="file.encoding.pkg" value="sun.io" />
+
+          <property name="file.separator" value="\" />
+
+          <property name="java.specification.name" value="Java Platform API Specification" />
+
+          <property name="java.class.version" value="51.0" />
+
+          <property name="user.country" value="JP" />
+
+          <property name="java.home" value="C:\Program Files\Java\jre7" />
+
+          <property name="sample.pkglist.dir" value="src/resource/pkglist" />
+
+          <property name="java.vm.info" value="mixed mode, sharing" />
+
+          <property name="ant.file" value="C:\eclipse4book\eclipse\workspace\antsample2\build.xml" />
+
+          <property name="os.version" value="6.1" />
+
+          <property name="sample.web.dir" value="web" />
+
+          <property name="path.separator" value=";" />
+
+          <property name="java.vm.version" value="23.1-b03" />
+
+          <property name="ant.file.type.antsample" value="file" />
+
+          <property name="user.variant" value="" />
+
+          <property name="ant.library.dir" value="C:\eclipse4book\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730\lib" />
+
+          <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+
+          <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+
+          <property name="sample.test.report.dir" value="dest/test/report" />
+
+          <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+
+          <property name="user.script" value="" />
+
+          <property name="sample.test.data.dir" value="dest/test/data" />
+
+          <property name="user.home" value="C:\Users\miya" />
+
+          <property name="java.specification.vendor" value="Oracle Corporation" />
+
+          <property name="java.library.path" value="C:\Program Files\Java\jre7\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre7/bin/client;C:/Program Files/Java/jre7/bin;C:/Program Files/Java/jre7/lib/i386;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;;C:\Program Files\cvsnt;;C:\eclipse4book\eclipse;;." />
+
+          <property name="java.vendor.url" value="http://java.oracle.com/" />
+
+          <property name="java.vm.vendor" value="Oracle Corporation" />
+
+          <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner bmi.BMICalclatorTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\eclipse4book\eclipse\workspace\antsample2\dest\test\data\TEST-bmi.BMICalclatorTest.xml crashfile=C:\eclipse4book\eclipse\workspace\antsample2\junitvmwatcher8653666409012547717.properties propsfile=C:\eclipse4book\eclipse\workspace\antsample2\junit4392927042461178291.properties" />
+
+          <property name="java.class.path" value="C:\eclipse4book\apache-tomcat\lib\jsp-api.jar;C:\eclipse4book\apache-tomcat\lib\servlet-api.jar;C:\eclipse4book\eclipse\workspace\antsample2\web\WEB-INF\lib\antlr.jar;C:\eclipse4book\eclipse\workspace\antsample2\web\WEB-INF\lib\commons-beanutils.jar;C:\eclipse4book\eclipse\workspace\antsample2\web\WEB-INF\lib\commons-digester.jar;C:\eclipse4book\eclipse\workspace\antsample2\web\WEB-INF\lib\commons-fileupload.jar;C:\eclipse4book\eclipse\workspace\antsample2\web\WEB-INF\lib\commons-logging.jar;C:\eclipse4book\eclipse\workspace\antsample2\web\WEB-INF\lib\commons-validator.jar;C:\eclipse4book\eclipse\workspace\antsample2\web\WEB-INF\lib\jakarta-oro.jar;C:\eclipse4book\eclipse\workspace\antsample2\web\WEB-INF\lib\mysql-connector-java-3.1.13-bin.jar;C:\eclipse4book\eclipse\workspace\antsample2\web\WEB-INF\lib\struts.jar;C:\eclipse4book\eclipse\workspace\antsample2\web\WEB-INF\classes;C:\eclipse4book\eclipse\plugins\org.junit_3.8.2.v3_8_2_v20100427-1100\junit.jar;C:\eclipse4book\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730\lib\ant-launcher.jar;C:\eclipse4book\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730\lib\ant.jar;C:\eclipse4book\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730\lib\ant-junit.jar;C:\eclipse4book\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730\lib\ant-junit4.jar" />
+
+          <property name="ant.version" value="Apache Ant(TM) version 1.8.3 compiled on February 26 2012" />
+
+          <property name="sample.class.dir" value="web/WEB-INF/classes" />
+
+          <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+
+          <property name="java.vm.specification.version" value="1.7" />
+
+          <property name="sun.cpu.endian" value="little" />
+
+          <property name="sun.os.patch.level" value="Service Pack 1" />
+
+          <property name="java.io.tmpdir" value="C:\Users\miya\AppData\Local\Temp\" />
+
+          <property name="sample.xmlcatalog.dir" value="src/resource/xmlcatalog" />
+
+          <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+
+          <property name="os.arch" value="x86" />
+
+          <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+
+          <property name="java.ext.dirs" value="C:\Program Files\Java\jre7\lib\ext;C:\Windows\Sun\Java\lib\ext" />
+
+          <property name="user.dir" value="C:\eclipse4book\eclipse\workspace\antsample2" />
+
+          <property name="sample.src.test.dir" value="src/test" />
+
+          <property name="sample.src.java.dir" value="src/java" />
+
+          <property name="line.separator" value="&#xd;&#xa;" />
+
+          <property name="java.vm.name" value="Java HotSpot(TM) Client VM" />
+
+          <property name="sample.cvs.basedir" value="." />
+
+          <property name="basedir" value="C:\eclipse4book\eclipse\workspace\antsample2" />
+
+          <property name="ant.java.version" value="1.7" />
+
+          <property name="ant.core.lib" value="C:\eclipse4book\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730\lib\ant.jar" />
+
+          <property name="sample.war.path" value="dest/myweb.war" />
+
+          <property name="file.encoding" value="MS932" />
+
+          <property name="java.specification.version" value="1.7" />
+
+          <property name="ant.project.invoked-targets" value="test" />
+
+      </properties>
+
+      <testcase classname="bmi.BMICalclatorTest" name="testCalclateBMI" time="0.0" />
+
+      <system-out><![CDATA[]]></system-out>
+
+      <system-err><![CDATA[]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="mywin7" id="1" name="SampleTest" package="bmi" tests="2" time="0.031" timestamp="2012-08-16T15:17:57">
+      <properties>
+          <property name="java.vendor" value="Oracle Corporation" />
+
+          <property name="sample.cvs.package" value="antsample2" />
+
+          <property name="sun.java.launcher" value="SUN_STANDARD" />
+
+          <property name="sun.management.compiler" value="HotSpot Client Compiler" />
+
+          <property name="os.name" value="Windows 7" />
+
+          <property name="sun.boot.class.path" value="C:\Program Files\Java\jre7\lib\resources.jar;C:\Program Files\Java\jre7\lib\rt.jar;C:\Program Files\Java\jre7\lib\sunrsasign.jar;C:\Program Files\Java\jre7\lib\jsse.jar;C:\Program Files\Java\jre7\lib\jce.jar;C:\Program Files\Java\jre7\lib\charsets.jar;C:\Program Files\Java\jre7\lib\jfr.jar;C:\Program Files\Java\jre7\classes" />
+
+          <property name="sun.desktop" value="windows" />
+
+          <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+
+          <property name="ant.home" value="C:\eclipse4book\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730" />
+
+          <property name="java.runtime.version" value="1.7.0_05-b06" />
+
+          <property name="sample.javadoc.dir" value="dest/javadoc" />
+
+          <property name="user.name" value="miya" />
+
+          <property name="user.language" value="ja" />
+
+          <property name="sample.dest.dir" value="dest" />
+
+          <property name="sample.catalina.home" value="C:/eclipse4book/apache-tomcat" />
+
+          <property name="sun.boot.library.path" value="C:\Program Files\Java\jre7\bin" />
+
+          <property name="ant.project.default-target" value="all1" />
+
+          <property name="ant.project.name" value="antsample" />
+
+          <property name="ant.file.antsample" value="C:\eclipse4book\eclipse\workspace\antsample2\build.xml" />
+
+          <property name="sample.cvs.root" value=":pserver:hoge@localhost:/cvsrepo" />
+
+          <property name="java.version" value="1.7.0_05" />
+
+          <property name="user.timezone" value="" />
+
+          <property name="sun.arch.data.model" value="32" />
+
+          <property name="java.endorsed.dirs" value="C:\Program Files\Java\jre7\lib\endorsed" />
+
+          <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86" />
+
+          <property name="sun.jnu.encoding" value="MS932" />
+
+          <property name="file.encoding.pkg" value="sun.io" />
+
+          <property name="file.separator" value="\" />
+
+          <property name="java.specification.name" value="Java Platform API Specification" />
+
+          <property name="java.class.version" value="51.0" />
+
+          <property name="user.country" value="JP" />
+
+          <property name="java.home" value="C:\Program Files\Java\jre7" />
+
+          <property name="sample.pkglist.dir" value="src/resource/pkglist" />
+
+          <property name="java.vm.info" value="mixed mode, sharing" />
+
+          <property name="ant.file" value="C:\eclipse4book\eclipse\workspace\antsample2\build.xml" />
+
+          <property name="os.version" value="6.1" />
+
+          <property name="sample.web.dir" value="web" />
+
+          <property name="path.separator" value=";" />
+
+          <property name="java.vm.version" value="23.1-b03" />
+
+          <property name="ant.file.type.antsample" value="file" />
+
+          <property name="user.variant" value="" />
+
+          <property name="ant.library.dir" value="C:\eclipse4book\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730\lib" />
+
+          <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+
+          <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+
+          <property name="sample.test.report.dir" value="dest/test/report" />
+
+          <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+
+          <property name="user.script" value="" />
+
+          <property name="sample.test.data.dir" value="dest/test/data" />
+
+          <property name="user.home" value="C:\Users\miya" />
+
+          <property name="java.specification.vendor" value="Oracle Corporation" />
+
+          <property name="java.library.path" value="C:\Program Files\Java\jre7\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre7/bin/client;C:/Program Files/Java/jre7/bin;C:/Program Files/Java/jre7/lib/i386;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;;C:\Program Files\cvsnt;;C:\eclipse4book\eclipse;;." />
+
+          <property name="java.vendor.url" value="http://java.oracle.com/" />
+
+          <property name="java.vm.vendor" value="Oracle Corporation" />
+
+          <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner bmi.SampleTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\eclipse4book\eclipse\workspace\antsample2\dest\test\data\TEST-bmi.SampleTest.xml crashfile=C:\eclipse4book\eclipse\workspace\antsample2\junitvmwatcher1821957920383583869.properties propsfile=C:\eclipse4book\eclipse\workspace\antsample2\junit1804484612365488208.properties" />
+
+          <property name="java.class.path" value="C:\eclipse4book\apache-tomcat\lib\jsp-api.jar;C:\eclipse4book\apache-tomcat\lib\servlet-api.jar;C:\eclipse4book\eclipse\workspace\antsample2\web\WEB-INF\lib\antlr.jar;C:\eclipse4book\eclipse\workspace\antsample2\web\WEB-INF\lib\commons-beanutils.jar;C:\eclipse4book\eclipse\workspace\antsample2\web\WEB-INF\lib\commons-digester.jar;C:\eclipse4book\eclipse\workspace\antsample2\web\WEB-INF\lib\commons-fileupload.jar;C:\eclipse4book\eclipse\workspace\antsample2\web\WEB-INF\lib\commons-logging.jar;C:\eclipse4book\eclipse\workspace\antsample2\web\WEB-INF\lib\commons-validator.jar;C:\eclipse4book\eclipse\workspace\antsample2\web\WEB-INF\lib\jakarta-oro.jar;C:\eclipse4book\eclipse\workspace\antsample2\web\WEB-INF\lib\mysql-connector-java-3.1.13-bin.jar;C:\eclipse4book\eclipse\workspace\antsample2\web\WEB-INF\lib\struts.jar;C:\eclipse4book\eclipse\workspace\antsample2\web\WEB-INF\classes;C:\eclipse4book\eclipse\plugins\org.junit_3.8.2.v3_8_2_v20100427-1100\junit.jar;C:\eclipse4book\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730\lib\ant-launcher.jar;C:\eclipse4book\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730\lib\ant.jar;C:\eclipse4book\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730\lib\ant-junit.jar;C:\eclipse4book\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730\lib\ant-junit4.jar" />
+
+          <property name="ant.version" value="Apache Ant(TM) version 1.8.3 compiled on February 26 2012" />
+
+          <property name="sample.class.dir" value="web/WEB-INF/classes" />
+
+          <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+
+          <property name="java.vm.specification.version" value="1.7" />
+
+          <property name="sun.cpu.endian" value="little" />
+
+          <property name="sun.os.patch.level" value="Service Pack 1" />
+
+          <property name="java.io.tmpdir" value="C:\Users\miya\AppData\Local\Temp\" />
+
+          <property name="sample.xmlcatalog.dir" value="src/resource/xmlcatalog" />
+
+          <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+
+          <property name="os.arch" value="x86" />
+
+          <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+
+          <property name="java.ext.dirs" value="C:\Program Files\Java\jre7\lib\ext;C:\Windows\Sun\Java\lib\ext" />
+
+          <property name="user.dir" value="C:\eclipse4book\eclipse\workspace\antsample2" />
+
+          <property name="sample.src.test.dir" value="src/test" />
+
+          <property name="sample.src.java.dir" value="src/java" />
+
+          <property name="line.separator" value="&#xd;&#xa;" />
+
+          <property name="java.vm.name" value="Java HotSpot(TM) Client VM" />
+
+          <property name="sample.cvs.basedir" value="." />
+
+          <property name="basedir" value="C:\eclipse4book\eclipse\workspace\antsample2" />
+
+          <property name="ant.java.version" value="1.7" />
+
+          <property name="ant.core.lib" value="C:\eclipse4book\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730\lib\ant.jar" />
+
+          <property name="sample.war.path" value="dest/myweb.war" />
+
+          <property name="file.encoding" value="MS932" />
+
+          <property name="java.specification.version" value="1.7" />
+
+          <property name="ant.project.invoked-targets" value="test" />
+
+      </properties>
+
+      <testcase classname="bmi.SampleTest" name="testBar" time="0.0" />
+
+      <testcase classname="bmi.SampleTest" name="testFoo" time="0.0" />
+
+      <system-out><![CDATA[]]></system-out>
+
+      <system-err><![CDATA[]]></system-err>
+
+  </testsuite>
+</testsuites>
